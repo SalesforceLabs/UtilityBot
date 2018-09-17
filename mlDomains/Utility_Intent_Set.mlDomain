@@ -1,0 +1,569 @@
+<!-- 
+/*
+ * Copyright (c) 2018, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */
+ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<MlDomain xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Intents for dialogs in Utility Chat Bot</description>
+    <label>Utility Intent Set</label>
+    <mlIntents>
+        <description>Intents that indicate user wants to check service request status</description>
+        <developerName>Check_Status</developerName>
+        <label>Check Status</label>
+        <mlIntentUtterances>
+            <utterance>I would like to know the status of my service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to know the status of my stop service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to know the status of service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to know the status of my transfer service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to know the status of stop service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to know the status of transfer service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Status of stop service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Status of stop service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Status of transfer service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Status of transfer service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&apos;s happening to my request?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&apos;s happening to my stop request?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&apos;s happening to my transfer request?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to know about my request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to know about my stop service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to know about my transfer service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you tell me about my stop service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you tell me about my transfer service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you tell me about my service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Status of request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Status of case</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you give me information on stop service request?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you give information on transfer service request?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Stop service status?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Stop service request status?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer service status?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer service request status?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Service request status</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Information on case no xxx?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&apos;s the status of my request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to know about my service request</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Is my service request completed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Has my service been started?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Has my service been transferred</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Has my service been stopped</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>case status</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Has the service transfer been initiated?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Has the stop service been initiated</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Have you started work on my case?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&apos;s happening with my case?</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <description>Intents that indicate user wants to end chat</description>
+        <developerName>End_Chat</developerName>
+        <label>End Chat</label>
+        <mlIntentUtterances>
+            <utterance>ok, good bye</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>ok, bye</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>ok, stop chat</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>ok, end chat</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Don&apos;t need anything else</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>thank you for your help</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>end chat</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I got what I wanted</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Good bye</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Bye</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>That&apos;s all I need</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Stop Chat</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <description>Intents that indicate that user wants to check the energy usage.</description>
+        <developerName>Energy_Usage</developerName>
+        <label>Energy Usage</label>
+        <mlIntentUtterances>
+            <utterance>How is my energy spending?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&apos;s my energy reading?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How much energy did I use?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to know about my energy consumption</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How much energy did I consume?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to know about my energy usage</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you tell me about my energy spend?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you tell me about how much energy I used?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Is my energy usage lesser than last month?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What&apos;s my current energy usage?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How does my energy consumption look like?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How does my energy usage look like?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How is my energy spending look this month?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How was energy spending last month?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How&apos;s my energy usage this month?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How&apos;s my energy usage last month?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to know about energy usage</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to know energy spending</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Energy spent</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Energy consumed</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Energy used</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Energy reading</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <description>Intents that indicate that user wants to report or view outage</description>
+        <developerName>Report_or_View_Outage</developerName>
+        <label>Report or View Outage</label>
+        <mlIntentUtterances>
+            <utterance>I have no power</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I have no electricity</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>There is loss of power</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>There is power outage</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>There is power loss</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>We have no electricity</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>We have lost electricity</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>lost electricity</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Electricity loss</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When will my power come back?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When will my power be restored?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When will my electricity come back?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When will my electricity be restored?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>There is darkness</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What time is my power coming back?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What time is my electricity coming back?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why do I have no power?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why do I have no electricity?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What has caused power loss?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What has caused electricity loss?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What is wrong with the power supply to my area?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What is wrong with the electricity supply to my area?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why is there darkness in my area?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>There is blackout?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why are we having a black out?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why are we having loss of power?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why are we having loss of electricity?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why is there no power at my home?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why is there no electricity at my home?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I don&apos;t have power, but my area has power</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What is causing power outage?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>My neighbors have lost power, will I lose it too?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>There is pitch black darkness in my area</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>There is pitch balck darkness in my neighborhood</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How long will it take it restore power?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How long will it take to restore electricity?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>When did the power outage start?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>It&apos;s so hot and we have lost power</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>It&apos;s so hot and we have lost electricity</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>It&apos;s so dark  and there is no electricity</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>It&apos;s so dark  and there is no electricity</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Why is it taking so long to restore power supply?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Whom should I contact to restore my power?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What should I do to restore my power?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What should I do to get electricity back?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>What should I do to restore  electricity?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>It has been hours since we have no power</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>It has been hours since we have no electricity</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>It has been hours since we have been sitting in darkness</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <description>Intents that indicate user wants to stop service</description>
+        <developerName>Stop_Service</developerName>
+        <label>Stop Service</label>
+        <mlIntentUtterances>
+            <utterance>I want to stop service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to stop service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you stop my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Would you stop my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you help with stop service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How should I go about stopping my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Will you stop my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Could you stop my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Please stop my service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Stopping service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Stop service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to end my service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to end my service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you end my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Would you end my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you help with ending of my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How should I end my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Will you end my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Could you end my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Please end my service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I am changing my address to a new state I want to end my existing service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How do I end my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How do I stop my service?</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlIntents>
+        <description>Intents that indicate user wants to transfer service</description>
+        <developerName>Transfer_Service</developerName>
+        <label>Transfer Service</label>
+        <mlIntentUtterances>
+            <utterance>I want to transfer service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to transfer service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you transfer my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Would you transfer my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you help with transfer of service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How should I go about transfering my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Will you transfer my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Could you transfer my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Please transfer my service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer of service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Transfer service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to move my service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I would like to move my service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you move my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Would you move my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Can you help with moving of my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How should I move my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Will you move my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Could you move my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>Please move my service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I want to move my service to a new address</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I am moving houses , I want to transfer service</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I am changing my address I want to transfer my existing service to my new address</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How do I move my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>How do I transfer my service?</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I will be moving to a new place soon, I want to transfer my service to the new location</utterance>
+        </mlIntentUtterances>
+        <mlIntentUtterances>
+            <utterance>I will be moving to a new place soon, I want to move my service to the new location</utterance>
+        </mlIntentUtterances>
+    </mlIntents>
+    <mlSlotClasses>
+        <description>Area ZipCode</description>
+        <developerName>ZipCode</developerName>
+        <extractionRegex>^\d{5}(?:[-\s]?\d{4})?$</extractionRegex>
+        <extractionType>Pattern</extractionType>
+        <label>ZipCode</label>
+    </mlSlotClasses>
+</MlDomain>

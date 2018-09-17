@@ -1,0 +1,55 @@
+<!-- /*
+ * Copyright (c) 2018, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Message_No_Outage</fullName>
+        <categories>Bot messages</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message - No Outage</shortDescription>
+        <value>No known outage in {0} area.</value>
+    </labels>
+    <labels>
+        <fullName>Message_Out_of_Service_Area</fullName>
+        <categories>Bot messages</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message - Out of Service Area</shortDescription>
+        <value>I am sorry, but this zipcode {0} is not in our service area. Please check your service provider.</value>
+    </labels>
+    <labels>
+        <fullName>Message_Outage_Information</fullName>
+        <categories>Bot messages</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message - Outage Information</shortDescription>
+        <value>There is currently an outage in {0} area.
+Start Date: 
+{1}
+Cause: {2}
+Status: {3}
+Estimated Resolution: 
+{4}</value>
+    </labels>
+    <labels>
+        <fullName>Message_Usage_Information_Bill_Due</fullName>
+        <categories>Bot messages</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message - Usage Information Bill Due</shortDescription>
+        <value>Your usage for {0} - {1} was {2}. The bill amount is ${3} and is due on {4}.</value>
+    </labels>
+    <labels>
+        <fullName>Message_Usage_Information_Bill_Paid</fullName>
+        <categories>Bot messages</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Message - Usage Information Bill Paid</shortDescription>
+        <value>Your usage for {0} - {1} was {2}. The bill amount is ${3} and has been paid.</value>
+    </labels>
+</CustomLabels>

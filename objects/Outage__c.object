@@ -1,0 +1,203 @@
+<!-- 
+/*
+ * Copyright (c) 2018, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */
+ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Custom object to track outages. This will have outage information.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Actual_Resolution_Date__c</fullName>
+        <description>Date time of actual resolution</description>
+        <externalId>false</externalId>
+        <label>Actual Resolution Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Cause__c</fullName>
+        <description>Cause for the outage</description>
+        <externalId>false</externalId>
+        <label>Cause</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Faulty Device</fullName>
+                    <default>false</default>
+                    <label>Faulty Device</label>
+                </value>
+                <value>
+                    <fullName>Planned Maintenance</fullName>
+                    <default>false</default>
+                    <label>Planned Maintenance</label>
+                </value>
+                <value>
+                    <fullName>Unknown</fullName>
+                    <default>false</default>
+                    <label>Unknown</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Estimated_End__c</fullName>
+        <description>Estimated end date time</description>
+        <externalId>false</externalId>
+        <label>Estimated End</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>First_Reported_By__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>First contact that reported this outage.</description>
+        <externalId>false</externalId>
+        <label>First Reported By</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Outages</relationshipLabel>
+        <relationshipName>Outages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Outage_Start__c</fullName>
+        <description>Start date time of the outage</description>
+        <externalId>false</externalId>
+        <label>Outage Start</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <description>Provides the status of the outage</description>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Investigating</fullName>
+                    <default>false</default>
+                    <label>Investigating</label>
+                </value>
+                <value>
+                    <fullName>Crew assigned</fullName>
+                    <default>false</default>
+                    <label>Crew assigned</label>
+                </value>
+                <value>
+                    <fullName>Crew on its way</fullName>
+                    <default>false</default>
+                    <label>Crew on its way</label>
+                </value>
+                <value>
+                    <fullName>Crew is onsite</fullName>
+                    <default>false</default>
+                    <label>Crew is onsite</label>
+                </value>
+                <value>
+                    <fullName>Resolved</fullName>
+                    <default>false</default>
+                    <label>Resolved</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>ZipCode__c</fullName>
+        <description>Zipcode of the area where the outage has occured. This field can take zipcode in the following format:
+xxxxx
+xxxxx-xxxx</description>
+        <externalId>false</externalId>
+        <label>ZipCode</label>
+        <length>15</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Outage</label>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>O-{0000000}</displayFormat>
+        <label>Outage Name</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Outages</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>Read</sharingModel>
+    <startsWith>Vowel</startsWith>
+    <visibility>Public</visibility>
+</CustomObject>

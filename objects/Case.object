@@ -1,0 +1,80 @@
+<!-- /*
+ * Copyright (c) 2018, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Alert_Email__c</fullName>
+        <description>Email address for sending Outage alerts. This could be different than the contact email.</description>
+        <externalId>false</externalId>
+        <label>Alert Email</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Alert_Phone__c</fullName>
+        <description>Phone number for sending outage alert text messages. This could be different than the ContactPhone or ContactMobile</description>
+        <externalId>false</externalId>
+        <label>Alert Phone</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Phone</type>
+    </fields>
+    <fields>
+        <fullName>New_Service_Address__c</fullName>
+        <description>New service address for transferring service.</description>
+        <externalId>false</externalId>
+        <label>New Service Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Outage__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>For Outage Alerts related case associate the case with the outage</description>
+        <externalId>false</externalId>
+        <label>Outage</label>
+        <referenceTo>Outage__c</referenceTo>
+        <relationshipLabel>Cases</relationshipLabel>
+        <relationshipName>Cases</relationshipName>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Service_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Service End Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Service_Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Service Start Date</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+</CustomObject>

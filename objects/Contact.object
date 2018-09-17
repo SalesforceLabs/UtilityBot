@@ -1,0 +1,49 @@
+<!-- /*
+ * Copyright (c) 2018, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */ -->
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Code_CleanUp_Time__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Now() -  Code_Set_Time__c)*24*60</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Code CleanUp Time</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Code_Set_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Code Set Time</label>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Community_User_Logged_In__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Used to determine if the user has logged in or not when the user launches the bot</description>
+        <externalId>false</externalId>
+        <label>Community User Logged In</label>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Verification_Code__c</fullName>
+        <description>6 digit verification code. This code is deleted after successful verification or after an hour.</description>
+        <externalId>false</externalId>
+        <label>Verification Code</label>
+        <length>6</length>
+        <required>false</required>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

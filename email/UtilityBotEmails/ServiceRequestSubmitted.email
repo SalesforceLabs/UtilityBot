@@ -1,0 +1,3 @@
+Hello {!Case.Contact},
+
+Service request # {!Case.CaseNumber} has been created.

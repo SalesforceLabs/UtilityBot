@@ -1,0 +1,67 @@
+<!-- /*
+ * Copyright (c) 2018, salesforce.com, inc.
+ * All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause
+ * For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
+ */
+-->
+<aura:component implements="lightningsnapin:prechatUI" 
+                description="Custom Pre-Chat form for Snap In" 
+                controller="UtilityBot_PreChatController">
+    <!-- SLDS stylesheet-->
+    <ltng:require styles="{!$Resource.SLDS261 +'/styles/salesforce-lightning-design-system.min.css'}" />
+
+    <!-- Prechat field components to render. -->
+    <aura:attribute name="prechatFieldComponents" 
+                    type="List" 
+                    description="An array of objects representing the prechat fields specified in prechat setup."/>
+
+    <!-- Attribute to check if all required fields are populated -->
+    <aura:attribute name="validationSuccessful" 
+                    type="Boolean" 
+                    description="Determines if all required fields are populated or not" 
+                    default="true"/>
+    
+    <!-- Attribute for errormessage -->
+    <aura:attribute name="errorMessage" 
+                    type="String" 
+                    description="Error message to be displayed"/>    
+    
+    <!-- Handler for when this component is initialized. -->
+    <aura:handler name="init" 
+                  value="{!this}" 
+                  action="{!c.onInit}" />
+
+    <!-- For Aura performance. -->
+    <aura:locator target="startButton" 
+                  description="Prechat form submit button."/>
+    
+    <!-- Contains methods for getting prechat fields, starting a chat, and validating fields. -->
+    <lightningsnapin:prechatAPI aura:id="prechatAPI"/>
+    
+    <div class="prechatUI">
+        <aura:if isTrue="{!v.validationSuccessful!=true}">
+            <ui:message title="Error" 
+                        severity="error" 
+                        closable="false">
+                {!v.errorMessage}
+        	</ui:message>
+        </aura:if>
+        <div class="prechatContent slds-form slds-form_stacked " style="text-align:left">
+            <aura:iteration items="{!v.prechatFieldComponents}" var="field">
+            <!-- <ul class="fieldsList"> -->
+                    <div class="slds-form-element__control slds-p-around_medium">
+                        {!field}
+                    </div>
+                <!-- Look in the controller's onInit function. 
+				This component dynamically creates the prechat field components. -->
+                <!-- {!v.prechatFieldComponents} -->
+            <!-- </ul> -->
+            </aura:iteration>          
+        </div>
+        <div class="startButtonWrapper">
+            <lightning:button variant="brand" aura:id="startButton" class="startButton" label="{!$Label.LiveAgentPrechat.StartChat}" onclick="{!c.handleStartButtonClick}"/>
+        </div>
+    </div>
+
+</aura:component>
